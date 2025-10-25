@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  color: #000000;
+  padding-left: 5rem;
+}
+
+h3 {
+  color: #fff;
+}
+
+header,
+footer {
+  background: linear-gradient(175deg, #3703BF, #07044B);
+  padding: 20px 50px;
+}
+
+.footer-container {
+  display: flex;
+  vertical-align: center;
+  align-items: center;
+}
+
+.cta {
+  display: inline-block;
+  background: linear-gradient(#000000d2, #727287);
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 20px 30px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cta:hover {
+  background: linear-gradient(#000000, #5d5e78);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lien-icone {
+  margin-left: 10px;
+}
+
+.lien-icone:hover {
+  opacity: 0.5;
+}
+
+footer,
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin-left: 30px;
+}
+
+.portfolio-section-photos {
+  background-color: white;
+  margin-top: -1rem;
+}
+
+.portfolio-section-photos h2 {
+  color: #242424;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.grid-siteweb {
+  display: flex;
+  flex-direction: raw;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.grid-applications {
+  display: flex;
+  flex-direction: raw;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.grid-siteweb img,
+.grid-applications img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lien-conteneur-photo {
+  position: relative;
+}
+
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.lien-conteneur-photo:hover .photo-hover {
+  display: flex;
+}
+
+@media screen and (max-width:996px) {
+    header nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav img {
+    margin-bottom: 20px;
+  }
+
+  header,
+  footer {
+    padding: 20px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 50px 20px 50px 20px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .grid-siteweb {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    gap: 15px;
+  }
+
+  .grid-applications {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    gap: 15px;
+  }
+}
