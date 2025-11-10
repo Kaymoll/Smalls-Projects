@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mot de Passe</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link href="./generateurMDP.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Mot de Passe</h1>
+        
+        <div class="password-display">
+            <div id="password" class="password-text">Cliquez générer</div>
+            <button id="copy-btn" class="copy-btn" title="Copier le mot de passe">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="settings">
+            <div class="setting-item">
+                <span class="length-label">Longueur du Mot de Passe: <span id="length-value">12</span></span>
+                <div class="length-container">
+                    <input type="range" id="length" min="4" max="32" value="12">
+                </div>
+            </div>
+            
+            <div class="toggle-container">
+                <span>Majuscules</span>
+                <label class="toggle">
+                    <input type="checkbox" id="uppercase" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="toggle-container">
+                <span>Minuscules</span>
+                <label class="toggle">
+                    <input type="checkbox" id="lowercase" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="toggle-container">
+                <span>Chiffres</span>
+                <label class="toggle">
+                    <input type="checkbox" id="numbers" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="toggle-container">
+                <span>Symboles</span>
+                <label class="toggle">
+                    <input type="checkbox" id="symbols">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        
+        <button id="generate-btn" class="generate-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 2v6h-6"></path>
+                <path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path>
+                <path d="M3 12a9 9 0 0 0 15 6.7l3-2.7"></path>
+            </svg>
+            Générer un Mot de Passe
+        </button>
+    </div>
+
+    <script src="generateurMDP.js"></script>
+</body>
+</html>
